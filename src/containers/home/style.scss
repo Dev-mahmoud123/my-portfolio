@@ -1,0 +1,11 @@
+.home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100% - 80px);
+      
+      &_text-wrapper {
+            color: var(--main-color);
+            font-size: 3rem;
+      }
+}

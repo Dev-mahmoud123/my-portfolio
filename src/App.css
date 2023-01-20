@@ -4,7 +4,7 @@
   --background-color: #1d1d1d;
   --main-color: #ffdd40;
   --sub-text-color: #fffff;
-  --nab-background-color: #181818;
+  --nav-background-color: #181818;
 }
 
 * {
@@ -14,9 +14,16 @@
   scroll-behavior: smooth;
 }
 
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
 html {
   height: 100%;
-  font-size: 62.5%;
+  font-size: 90.5%;
 }
 
 body {
@@ -26,4 +33,12 @@ body {
 
 #root {
   height: 100%;
+}
+
+.App {
+  height: 100%;
+    
+  &_main-page-content {
+    
+  }
 }

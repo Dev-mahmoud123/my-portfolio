@@ -1,0 +1,98 @@
+.navbar {
+      background-color: var(--nav-background-color);
+      height: 80px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      position: sticky;
+      &_container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: inherit;
+            padding: 0 20px;
+
+            &_logo {
+                  color: var(--main-color);
+                  cursor: pointer;
+                  font-size: 30px;
+            }
+            &_menu {
+                  display: flex;
+                  text-align: center;
+                  &_items{
+                        margin: 0 10px;
+                        position: relative;
+                        padding: 10px 0 ;
+                        &::after{
+                              content: "";
+                              position: absolute;
+                              bottom: 0;
+                              left: 0;
+                              background-color: transparent;
+                              width: 0;
+                              height: 2px;
+                              transition: ease-in .2s;
+                        }
+                        &:hover::after{
+                              width: 50px; 
+                              background-color: var(--main-color);
+                        }
+                        &_links{
+                              color: var(--main-color);
+                              text-transform: uppercase;
+                        }
+                  }
+            }
+      }
+      &_icons {
+          padding: 0 20px;  
+        
+          button{
+             background-color: transparent;
+             border: none;
+             outline: none;
+            cursor: pointer;
+             i {
+                  font-size: 25px;
+                  color: var(--main-color);
+             }
+          }
+      }
+     
+}
+.navbar_icons {
+      display: none;
+}
+
+@media only screen and (max-width: 767px) {
+      .navbar_container_menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 80px;
+            width: 100%;
+            left: -110%;
+            opacity: 0;
+            transition: all 0.3s ease;
+
+          &.active {
+             left: 0;
+             opacity: 1;
+            .navbar_container_menu_items {
+                  padding: 10px 0;
+                 &:hover::after {
+                   width: 100%;
+                   background-color: var(--main-color);
+                  height: 1px;
+                 }
+             }
+          }
+      }
+      .navbar_icons {
+            display: block;
+      }
+}

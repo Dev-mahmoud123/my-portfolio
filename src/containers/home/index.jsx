@@ -1,7 +1,18 @@
 import React from "react";
+import "./style.scss"
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <section id="home" className="home">
+      <div className="home_text-wrapper">
+        <h1>
+          Hello , I'm Mahmoud Awad
+          <br />
+          Front End Developer
+        </h1>
+      </div>
+    </section>
+  );
 };
 
 export default Home;
