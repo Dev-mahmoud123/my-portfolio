@@ -67,7 +67,7 @@
       display: none;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
       .navbar_container_menu {
             display: flex;
             flex-direction: column;
@@ -94,5 +94,6 @@
       }
       .navbar_icons {
             display: block;
+            margin-right: 10px;
       }
 }
