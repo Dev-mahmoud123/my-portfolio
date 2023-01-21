@@ -1,0 +1,116 @@
+.about {
+      &_content {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px dashed var(--sub-main-color);
+            padding: 10px;
+            gap: 20px;
+            overflow: hidden;
+           &_info , &_services {
+            flex: 1;
+           }
+            &_info {
+
+                  h3 {
+                        font-size: 3vh;
+                        color: var(--main-color);
+                  }
+                  &_bio {
+                        padding: 10px 0 ;
+                        border-bottom: 1px dashed var(--sub-main-color);
+                       
+                        p {
+                              font-size: 2vh;
+                              color: var(--sub-text-color);
+                              font-weight: 500;
+                              line-height: 1.5;
+                              letter-spacing: 1.1px;
+                              padding: 10px 0;
+                        }
+                  }
+                  &_personal-info {
+                        padding: 10px 0;
+
+                        &_info-list {
+                              padding: 10px 0 ;
+
+                              li {
+                                    color: var(--sub-text-color);
+                                    font-size: 2.5vh;
+                                    font-weight: 500;
+                                    padding: 8px 0;
+                                    position: relative;
+                                    span {
+                                          margin: 0 10px;
+                                          border-bottom: 1px solid var(--main-color);
+                                    }
+                                    &::before{
+                                          content: "\f111";
+                                          position: absolute;
+                                          font-family: fontAwesome;
+                                          left: -5px;
+                                          top: 50%;
+                                         transform: translateY(-50%);
+                                         font-size: 1vh;
+                                    }
+                              }
+                        }
+                  }
+            }
+
+            &_services {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  &_inner-content {
+                        width: 300px;
+                        height: 300px;
+                        border-radius: 50%;
+                        border: 1px solid var(--sub-main-color);
+                        background: radial-gradient(150px , var(--main-color) , transparent 105%);
+                        position: relative;
+                        z-index: -1;
+                        animation: rotation 10s linear 3s  infinite;
+                      i {
+                        font-size: 40px;
+                        color: var(--main-color);
+                        display: inline-block;
+                        z-index: 5;
+                      }  
+                      i:nth-child(1) {
+                          position: absolute;
+                          left: -6%;
+                          top: 40%;
+                      } 
+                      i:nth-child(2) {
+                          position: absolute;
+                          right: -6%;
+                          top: 40%;
+                      } 
+                      i:nth-child(3) {
+                          position: absolute;
+                          left: 40%;
+                          top: -6%;
+                      } 
+                      i:nth-child(4) {
+                          position: absolute;
+                          left: 40%;
+                          bottom: -6%;
+                      } 
+                  }
+            }
+      }
+}
+
+@keyframes rotation {
+      100% {
+            transform: rotate(360deg);
+      }
+}
+
+@media only screen and (max-width: 767px) {
+      .about_content {
+            flex-direction: column;
+      }
+      
+}

@@ -1,0 +1,16 @@
+
+.wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10px;
+            border-bottom: 1px dashed var(--sub-main-color);
+            h2 {
+                  font-size: 5vh;
+                  color: var(--main-color);
+            }
+            span {
+                  font-size: 5vh;
+                  color: var(--main-color);
+            }
+}
