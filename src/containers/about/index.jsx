@@ -17,7 +17,7 @@ const About = () => {
             delay={0.5}
             play
             start={{
-              transform: "translateX(-550px)",
+              transform: "translateX(-700px)",
             }}
             end={{
               transform: "translateX(0)",
@@ -43,7 +43,7 @@ const About = () => {
             duration={1}
             delay={0.8}
             start={{
-              transform: "translateX(-550px)",
+              transform: "translateX(-500px)",
             }}
             end={{
               transform: "translateX(0)",

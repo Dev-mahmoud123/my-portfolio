@@ -9,11 +9,10 @@ import Contact from "./containers/contact";
 import { NavBar } from "./components/navBar";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import option from "./utilis/particles";
+import option from "./utils/particles";
 
 function App() {
   const location = useLocation();
-  console.log(location);
 
   const renderParticlesJsInHomePage = location.pathname === "/";
 

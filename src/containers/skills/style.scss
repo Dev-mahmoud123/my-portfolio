@@ -1,0 +1,68 @@
+.skills {
+      &_tech-skills {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            &_category-skill {
+                  flex: 1;
+
+                  h3{
+                        font-size: 20px;
+                        color: var(--main-color);
+                        font-weight: 600;
+                        padding:5px 10px;
+                        text-transform: uppercase;
+                        display: inline-block;
+                        border-bottom: 2px solid var(--main-color);
+                        position: relative;
+                        margin-bottom: 15px;
+
+                        &::before {
+                              content: "";
+                              position: absolute;
+                              width: 2px;
+                              height: 3px ;
+                              background-color: var(--main-color);
+                              bottom: 0;
+                              left: 0;
+                        }
+                        &::after {
+                              content: "";
+                              position: absolute;
+                              width: 2px;
+                              height: 3px ;
+                              background-color: var(--main-color);
+                              bottom: 0;
+                              right: 0;
+                        }
+                  }
+                  &_skill {
+                        padding: 10px 0;
+                        p {
+                          font-size: 16px;
+                          color: var(--sub-text-color);
+                        }
+                        .percentage {
+                              width: 100%;
+                              height: 10px;
+                              background-color: #ccc;
+                              margin-top: 5px;
+
+                              span {
+                                    background-color: var(--main-color);
+                                    height: 100%;
+                              }
+                        }
+      
+                  }
+            }
+      }
+}
+
+@media only screen and (max-width: 767px) {
+      .skills_tech-skills {
+            flex-direction: column;
+      }
+}
