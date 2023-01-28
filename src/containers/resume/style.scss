@@ -1,0 +1,152 @@
+@mixin before-after-properties {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 4px;
+  background-color: var(--main-color);
+}
+
+@mixin content-properties {
+  text-align: start;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid var(--sub-main-color);
+  position: relative;
+  border-radius: 2px;
+  color: var(--sub-text-color);
+  //
+  h4 {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  p:nth-of-type(1) {
+    padding: 10px 0;
+    color: #ccc;
+    font-size: 14px;
+  }
+  p:nth-of-type(2) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@mixin before-properties {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: calc(100% - 50px);
+  background-color: var(--main-color);
+  left: -20px;
+  bottom: 0;
+}
+
+@mixin before-content-properties {
+  font-family: fontAwesome;
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  border: 3px solid var(--sub-text-color);
+  color: var(--main-color);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin after-content-properties {
+  content: "";
+  position: absolute;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent var(--sub-main-color) transparent transparent;
+  left: -18px;
+  top: 10px;
+}
+
+//--------------------------//
+.resume {
+  //
+  .timeline {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    //
+    &_education {
+      padding: 0 10px;
+      flex: 1;
+      text-align: center;
+      position: relative;
+
+      &::before {
+        @include before-properties;
+      }
+      //
+      &_header-text {
+        color: var(--sub-text-color);
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 5px 10px;
+        border-bottom: 2px solid var(--main-color);
+        display: inline-block;
+        margin-bottom: 20px;
+        position: relative;
+
+        &::before {
+          @include before-after-properties;
+          left: 0;
+          bottom: 0;
+        }
+
+        &::after {
+          @include before-after-properties;
+          right: 0;
+          bottom: 0;
+        }
+      }
+      //
+      &_content {
+        @include content-properties;
+
+        &::before {
+          content: "\f19d";
+          @include before-content-properties;
+        }
+        &::after {
+          @include after-content-properties;
+        }
+      }
+    }
+    //
+    &_experience {
+      @extend .timeline_education;
+
+      &_header-text {
+        @extend .timeline_education_header-text;
+      }
+
+      &_content {
+        @include content-properties;
+        &::before {
+          content: "\f0b1";
+          @include before-content-properties;
+        }
+        &::after {
+          @include after-content-properties;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .timeline {
+    flex-direction: column;
+  }
+}
