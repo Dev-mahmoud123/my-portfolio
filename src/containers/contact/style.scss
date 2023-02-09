@@ -1,0 +1,116 @@
+.contact {
+   &_content {
+      padding: 30px 15px ;
+      
+      &_header-text {
+            width: fit-content;
+            h3 {
+                  color: var(--sub-text-color);
+                  font-size: 20px;
+                  margin-bottom: 20px;
+                  text-transform: uppercase;
+                  font-weight: 500;
+                  padding: 5px 10px;
+                  border-bottom: 1px solid var(--main-color);
+                  position: relative;
+
+                  &::before, &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        width: 2px;
+                        height: 5px;
+                        background-color: var(--main-color);
+                  }
+                  &::before {
+                        left: 0;
+                  }
+                  &::after {
+                        right: 0;
+                  }
+            }
+      
+      }
+      &_form {
+            width: 100%;
+
+            &_control-wrapper {
+                  display: grid;
+                  grid-template-columns: repeat(2 , 1fr);
+                  gap: 30px;
+                
+                  .nameWrapper  ,
+                  .mailWrapper ,
+                  .messageWrapper{
+                         position: relative;
+                   .nameInput , 
+                   .mailInput,
+                   .messageInput {
+                             width: 100%;
+                             border: 1px solid var(--main-color);
+                             background-color: transparent;
+                             color: var(--sub-text-color);
+                             padding: 10px 20px;
+                             position: relative;
+                             transition: all 0.5s ease-in;
+
+                        }
+                        .nameLabel, 
+                        .mailLabel,
+                        .messageLabel {
+                              position: absolute;
+                              top: 10px;
+                              left: 7px;
+                              font-weight: 500;
+                              color: var(--main-color);
+                              transition: all 0.5s ease-in;
+                        }
+
+                        .nameInput:focus,
+                        .mailInput:focus, 
+                        .messageInput:focus {
+                              outline: none;
+                        }
+
+                        .nameInput:focus + .nameLabel,
+                        .nameInput:valid + .nameLabel,
+                        .mailInput:focus + .mailLabel ,
+                        .mailInput:valid + .mailLabel,
+                        .messageInput:focus + .messageLabel,
+                        .messageInput:valid + .messageLabel{
+                              top: -20px;
+                              left: 0;
+                        }
+                        .messageInput {
+                              resize: none;
+                              height: 150px;
+                        }
+                  }
+            }
+            button {
+                  padding: 10px 15px;
+                  background-color: transparent;
+                  color: var(--main-color);
+                  margin-top: 20px;
+                  border: 1px solid var(--main-color);
+                  text-transform: uppercase;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  transition: all 0.5s ease-in;
+
+                  &:hover {
+                        background-color: var(--main-color);
+                        color: black;
+                        font-weight: 500;
+                  }
+            }
+
+      }
+   }
+}
+
+@media only screen and (max-width: 768px) {
+      .contact_content_form_control-wrapper {
+            grid-template-columns: repeat(1 , 1fr);
+      }
+}
