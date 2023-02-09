@@ -87,8 +87,7 @@
                         }
                   }
             }
-            button {
-                  padding: 10px 15px;
+            .btn-submit {
                   background-color: transparent;
                   color: var(--main-color);
                   margin-top: 20px;
@@ -97,6 +96,14 @@
                   border-radius: 5px;
                   cursor: pointer;
                   transition: all 0.5s ease-in;
+                  height: 30px;
+                  width: 100px;
+                  display:flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: absolute;
+                  bottom: -40px;
+                  left: 0;
 
                   &:hover {
                         background-color: var(--main-color);

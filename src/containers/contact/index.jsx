@@ -1,9 +1,31 @@
-import React from "react";
 import PageHeaderContent from "../../components/pageHeaderContent";
 import "./style.scss";
 import { Animate } from "react-simple-animate";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_ruzs60a",
+        "template_j7b9udd",
+        form.current,
+        "SfYVniDmq2_I_ZcAk"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <section id="contact" className="contact">
       <PageHeaderContent
@@ -38,15 +60,29 @@ const Contact = () => {
           }}
         >
           <div className="contact_content_form">
-            <div className="contact_content_form_control-wrapper">
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="contact_content_form_control-wrapper"
+            >
               <div className="nameWrapper">
-                <input required type="text" name="name" className="nameInput" />
+                <input
+                  required
+                  type="text"
+                  name="user_name"
+                  className="nameInput"
+                />
                 <label htmlFor="name" className="nameLabel">
-                  Name{" "}
+                  Name
                 </label>
               </div>
               <div className="mailWrapper">
-                <input required type="text" name="mail" className="mailInput" />
+                <input
+                  required
+                  type="email"
+                  name="user_email"
+                  className="mailInput"
+                />
                 <label htmlFor="mail" className="mailLabel">
                   Email
                 </label>
@@ -62,8 +98,8 @@ const Contact = () => {
                   Message
                 </label>
               </div>
-            </div>
-            <button>submit</button>
+              <input type="submit" className="btn-submit" value="send" />
+            </form>
           </div>
         </Animate>
       </div>
