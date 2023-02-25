@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
+import logo from '../../images/mahmoud-awad.png'
 
 const data = [
   {
@@ -41,7 +42,7 @@ export const NavBar = () => {
       <nav className="navbar">
         <div className="navbar_container">
           <Link to={"/"} className="navbar_container_logo">
-          <i className="fa-solid fa-user-tie"></i>
+          <img src={logo} alt="Logo"/>
           </Link>
         </div>
         <ul className={`navbar_container_menu ${isToggled ? "active" : ""}`}>
