@@ -56,7 +56,7 @@ const About = () => {
                   <span>Name </span> Mahmoud Awad
                 </li>
                 <li>
-                  <span>Age </span> 26
+                  <span>Age </span> 27
                 </li>
                 <li>
                   <span>Address </span> Cairo , Egypt

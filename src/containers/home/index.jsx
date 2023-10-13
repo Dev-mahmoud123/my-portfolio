@@ -12,7 +12,7 @@ const Home = () => {
   };
 
 const onClickButton = ()=> {
-  fetch("../../files/Mahmoud's cv.pdf").then(
+  fetch("/public/files/Mahmoud Awad's cv.pdf").then(
     response => {
       response.blob().then(blob=> {
         const fileURL = window.URL.createObjectURL(blob);

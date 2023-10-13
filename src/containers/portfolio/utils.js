@@ -8,6 +8,7 @@ import  imageSeven  from "../../images/template-four.png";
 import  imageEight  from "../../images/template-five.png";
 import  imageNine from "../../images/movie-app.png";
 import  imageTen from "../../images/ecommerce-app.png";
+import  imageElev from "../../images/prayer-timing.png";
 
 
 export const portfolioData = [
@@ -27,55 +28,62 @@ export const portfolioData = [
   },
   {
     id: 3,
+    name: "prayers timing",
+    image: imageElev,
+    category: "web",
+    link: 'https://prayers-time.netlify.app/'
+  },
+  {
+    id: 4,
     name: "dashboard",
     image: imageThree,
     category: "web",
     link: 'https://dev-mahmoud123.github.io/dashboard-design/'
   },
   {
-    id: 4,
+    id: 5,
     name: "management system",
     image: imageFour,
     category: "web",
     link: 'https://dev-mahmoud123.github.io/project-with-crud-operation/'
   },
   {
-    id: 5,
+    id: 6,
     name: "template two",
     image: imageFive,
     category: "web",
     link: 'https://dev-mahmoud123.github.io/HTML_AND_CSS_TEMPLETE2/'
   },
   {
-    id: 6,
+    id: 7,
     name: "template three",
     image: imageSix,
     category: "web",
     link: 'https://dev-mahmoud123.github.io/HTML_AND_CSS_template3/'
   },
   {
-    id: 7,
+    id: 8,
     name: "template four",
     image: imageSeven,
     category: "web",
     link: 'https://dev-mahmoud123.github.io/bondi-website-with-bootstrap/'
   },
   {
-    id: 8,
+    id: 9,
     name: "template five",
     image: imageEight,
     category: "web",
     link: 'https://dev-mahmoud123.github.io/design-with-html-and-css-and-js/'
   },
   {
-    id: 9,
+    id: 10,
     name: "Movie App",
     image: imageNine,
     category: "app",
     link: 'https://github.com/Dev-mahmoud123/movie-app'
   },
   {
-    id: 10,
+    id: 11,
     name: "shop app",
     image: imageTen,
     category: "app",
